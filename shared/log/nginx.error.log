@@ -1,0 +1,1 @@
+2021/01/21 20:26:56 [error] 83561#83561: *1 open() "/home/cryo/SET_APP_NAME_HERE/shared/favicon.ico" failed (2: No such file or directory), client: 122.179.194.89, server: 18.192.51.200, request: "GET /favicon.ico HTTP/1.1", host: "18.192.51.200", referrer: "http://18.192.51.200/"
