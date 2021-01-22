@@ -1,0 +1,13 @@
+orbs:
+  aws-code-deploy: circleci/aws-code-deploy@1.0.1
+version: 2.1
+workflows:
+  deploy_application:
+    jobs:
+      - aws-code-deploy/deploy:
+          application-name: sampleapp
+          arguments: '--profile default'
+          bundle-bucket: sampleappraj
+          bundle-key: sample/$CIRCLE_PROJECT_REPONAME-${CIRCLE_BRANCH}-$CIRCLE_TAG-$CIRCLE_BUILD_NUM-$CIRCLE_JOB
+          deployment-group: sampleapp-group
+          service-role-arn: arn:aws:iam::978016941027:role/sampleappdeploy
